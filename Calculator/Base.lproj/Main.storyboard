@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAL-tu-rbI">
+                                <rect key="frame" x="50" y="308.5" width="58" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r1K-fd-kdg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2n-Jq-cYE">
+                                <rect key="frame" x="267" y="308.5" width="58" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w7v-K8-QtA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwD-5d-OQS">
+                                <rect key="frame" x="158" y="303" width="58" height="60"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r37-al-xMy">
+                                <rect key="frame" x="155" y="413" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-o2-S2r">
+                                <rect key="frame" x="116" y="98" width="144.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="aZQ-o2-S2r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ml-Vv-Cn0"/>
+                            <constraint firstItem="xwD-5d-OQS" firstAttribute="leading" secondItem="zAL-tu-rbI" secondAttribute="trailing" constant="50" id="9fr-il-tbm"/>
+                            <constraint firstItem="zAL-tu-rbI" firstAttribute="width" secondItem="b2n-Jq-cYE" secondAttribute="width" id="GNE-P2-EEm"/>
+                            <constraint firstItem="zAL-tu-rbI" firstAttribute="width" secondItem="xwD-5d-OQS" secondAttribute="width" id="J94-U8-Q7H"/>
+                            <constraint firstItem="aZQ-o2-S2r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="QCq-Zn-bei"/>
+                            <constraint firstItem="zAL-tu-rbI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="euf-1v-EEq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2n-Jq-cYE" secondAttribute="trailing" constant="50" id="f1F-u4-xyf"/>
+                            <constraint firstItem="b2n-Jq-cYE" firstAttribute="leading" secondItem="xwD-5d-OQS" secondAttribute="trailing" constant="51" id="hcw-Gf-IsJ"/>
+                            <constraint firstItem="b2n-Jq-cYE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="juD-PP-Itl"/>
+                            <constraint firstItem="xwD-5d-OQS" firstAttribute="height" secondItem="zAL-tu-rbI" secondAttribute="height" constant="10" id="nxH-TD-Xv7"/>
+                            <constraint firstItem="r37-al-xMy" firstAttribute="top" secondItem="xwD-5d-OQS" secondAttribute="bottom" constant="50" id="sFY-dI-AOd"/>
+                            <constraint firstItem="xwD-5d-OQS" firstAttribute="centerY" secondItem="zAL-tu-rbI" secondAttribute="centerY" id="sPv-O1-zK3"/>
+                            <constraint firstItem="zAL-tu-rbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="w6v-iS-esu"/>
+                            <constraint firstItem="r37-al-xMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcT-26-fQw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yC0-Ci-AuJ" appends="YES" id="oNw-ua-PrK"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="firstOperand" destination="zAL-tu-rbI" id="S1i-Mq-g3G"/>
+                        <outlet property="operatorPicker" destination="xwD-5d-OQS" id="f4U-nP-UJr"/>
+                        <outlet property="secondOperand" destination="b2n-Jq-cYE" id="Iw7-jA-yEv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yC0-Ci-AuJ">
+                    <connections>
+                        <action selector="tapPressed:" destination="BYZ-38-t0r" id="n49-VD-kot"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
