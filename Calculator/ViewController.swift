@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var answerLabel: UILabel!
     let pickerData = ["+", "-", "*", "/"]
     @IBOutlet weak var operatorPicker: UIPickerView!
     @IBOutlet weak var secondOperand: UITextField!

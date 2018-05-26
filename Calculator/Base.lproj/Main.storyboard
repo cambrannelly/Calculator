@@ -40,12 +40,18 @@
                                 <rect key="frame" x="158" y="303" width="58" height="60"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r37-al-xMy">
-                                <rect key="frame" x="155" y="413" width="64" height="30"/>
+                                <rect key="frame" x="155" y="433" width="64" height="30"/>
                                 <state key="normal" title="Calculate"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-o2-S2r">
                                 <rect key="frame" x="116" y="98" width="144.5" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHX-38-N9w">
+                                <rect key="frame" x="167" y="389" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,12 +64,14 @@
                             <constraint firstItem="zAL-tu-rbI" firstAttribute="width" secondItem="b2n-Jq-cYE" secondAttribute="width" id="GNE-P2-EEm"/>
                             <constraint firstItem="zAL-tu-rbI" firstAttribute="width" secondItem="xwD-5d-OQS" secondAttribute="width" id="J94-U8-Q7H"/>
                             <constraint firstItem="aZQ-o2-S2r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="QCq-Zn-bei"/>
+                            <constraint firstItem="EHX-38-N9w" firstAttribute="top" secondItem="xwD-5d-OQS" secondAttribute="bottom" constant="26" id="S7j-J4-FIY"/>
+                            <constraint firstItem="EHX-38-N9w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZE-rL-lU8"/>
                             <constraint firstItem="zAL-tu-rbI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="euf-1v-EEq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2n-Jq-cYE" secondAttribute="trailing" constant="50" id="f1F-u4-xyf"/>
                             <constraint firstItem="b2n-Jq-cYE" firstAttribute="leading" secondItem="xwD-5d-OQS" secondAttribute="trailing" constant="51" id="hcw-Gf-IsJ"/>
                             <constraint firstItem="b2n-Jq-cYE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="juD-PP-Itl"/>
                             <constraint firstItem="xwD-5d-OQS" firstAttribute="height" secondItem="zAL-tu-rbI" secondAttribute="height" constant="10" id="nxH-TD-Xv7"/>
-                            <constraint firstItem="r37-al-xMy" firstAttribute="top" secondItem="xwD-5d-OQS" secondAttribute="bottom" constant="50" id="sFY-dI-AOd"/>
+                            <constraint firstItem="r37-al-xMy" firstAttribute="top" secondItem="xwD-5d-OQS" secondAttribute="bottom" constant="70" id="sFY-dI-AOd"/>
                             <constraint firstItem="xwD-5d-OQS" firstAttribute="centerY" secondItem="zAL-tu-rbI" secondAttribute="centerY" id="sPv-O1-zK3"/>
                             <constraint firstItem="zAL-tu-rbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="w6v-iS-esu"/>
                             <constraint firstItem="r37-al-xMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcT-26-fQw"/>
@@ -74,6 +82,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="answerLabel" destination="EHX-38-N9w" id="JzG-8p-oT8"/>
                         <outlet property="firstOperand" destination="zAL-tu-rbI" id="S1i-Mq-g3G"/>
                         <outlet property="operatorPicker" destination="xwD-5d-OQS" id="f4U-nP-UJr"/>
                         <outlet property="secondOperand" destination="b2n-Jq-cYE" id="Iw7-jA-yEv"/>
