@@ -15,19 +15,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var operatorPicker: UIPickerView!
     @IBOutlet weak var secondOperand: UITextField!
     @IBOutlet weak var firstOperand: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         operatorPicker.delegate = self
         operatorPicker.dataSource = self
     }
+    
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func tapPressed(_ sender: Any) {
         self.view.endEditing(true)
+        
+        
     }
     
     
@@ -43,5 +45,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return pickerData[row]
     }
     
+    
+    @IBAction func calculate(_ sender: Any) {
+        
+        var op = operatorPicker.selectedRow(inComponent: 0)
+        
+        var firstNumber = firstOperand.text!
+        
+        
+        var secondNumber = secondOperand.text!
+        
+        
+        
+        
+        
+        
+    }
 }
 
