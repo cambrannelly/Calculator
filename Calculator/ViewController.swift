@@ -50,10 +50,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         var op = operatorPicker.selectedRow(inComponent: 0)
         
-        var firstNumber = firstOperand.text!
+        var firstNumber = Double(firstOperand.text!)
         
-        
-        var secondNumber = secondOperand.text!
+        var secondNumber = Double(secondOperand.text!)
         
         
         
