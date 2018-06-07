@@ -48,7 +48,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func calculate(_ sender: Any) {
         
-        var op = operatorPicker.selectedRow(inComponent: 0)
+        var op = String(describing:operatorPicker.selectedRow(inComponent: 0))
         
         var firstNumber = Double(firstOperand.text!)
         
