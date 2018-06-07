@@ -55,7 +55,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         var secondNumber = Double(secondOperand.text!)
         
         
-        
+        if op == "+"{
+            
+        }
         
         
         
